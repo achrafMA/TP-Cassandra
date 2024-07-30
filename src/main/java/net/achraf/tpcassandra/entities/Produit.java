@@ -7,14 +7,14 @@ import org.springframework.data.cassandra.core.mapping.PrimaryKey;
 import org.springframework.data.cassandra.core.mapping.Table;
 
 import java.util.UUID;
-@Table("utilisateurs")
+@Table("produits")
 @NoArgsConstructor @AllArgsConstructor
-public class User {
+public class Produit {
     @PrimaryKey
     private UUID id;
     private String name;
-    private int age;
-    private String email;
+    private int quantite;
+    private String paysOrigine;
 
     public UUID getId() {
         return id;
@@ -32,19 +32,19 @@ public class User {
         this.name = name;
     }
 
-    public int getAge() {
-        return age;
+    public int getQuantite() {
+        return quantite;
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    public void setQuantite(int quantite) {
+        this.quantite = quantite;
     }
 
-    public String getEmail() {
-        return email;
+    public String getPaysOrigine() {
+        return paysOrigine;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setPaysOrigine(String paysOrigine) {
+        this.paysOrigine = paysOrigine;
     }
 }
